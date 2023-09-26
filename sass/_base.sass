@@ -5,21 +5,24 @@ $c-blue: #118DA8
 $c-yellow: #FCFF51
 
 @mixin res ($breakpoint)
-   @if $breakpoint == point-3
+   @if $breakpoint == pointmin
+      @media only screen and (max-width: 550px)
+         @content
+   @if $breakpoint == pointport
       @media only screen and (max-width: 710px)
          @content
-   @if $breakpoint == point-2
+   @if $breakpoint == pointtab
       @media only screen and (max-width: 900px)
          @content
-   @if $breakpoint == point-1
+   @if $breakpoint == pointcomp
       @media only screen and (max-width: 1180px)
          @content
 html
    font-size: 62.5%
-   @include res(point-1)
+   @include res(pointcomp)
       font-size: 50%
-   @include res(point-2)
-      font-size: 45%
+   @include res(pointtab)
+      font-size: 40%
 *,::after,::before
    margin: 0
    padding: 0
@@ -50,7 +53,7 @@ body
    font-size: 1.7rem
    line-height: 2.7rem
    transition: 0.3s all ease
-   @include res(point-2)
+   @include res(pointtab)
       font-size: 2.5rem
    &:hover
       color: $c-blue
@@ -60,7 +63,7 @@ body
    font-size: 7rem
    line-height: 8.8rem
    letter-spacing: 0.32rem
-   @include res(point-3)
+   @include res(pointport)
       font-size: 5rem
       line-height: 6rem
 
@@ -73,7 +76,7 @@ body
    font-size: 6.4rem
    line-height: 7rem
    letter-spacing: 0.256rem
-   @include res(point-2)
+   @include res(pointtab)
       font-size: 4rem
 
 .title-4

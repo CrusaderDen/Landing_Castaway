@@ -1,44 +1,46 @@
 .intro
    display: flex
    margin-bottom: 9.3rem
-   @include res(point-3)
+   @include res(pointport)
       flex-direction: column-reverse
    &__img
       height: 87.3rem
       border-radius: 1.2rem
-      @include res(point-1)
+      @include res(pointcomp)
          height: 60.3rem
-      @include res(point-3)
+      @include res(pointport)
          object-fit: cover
+      @include res(pointmin)
+         height: 40rem
    &__right-side
       padding: 29.4rem 6rem 0 6rem
-      @include res(point-1)
+      @include res(pointcomp)
          padding-top: 10rem
-      @include res(point-2)
+      @include res(pointtab)
          padding-top: 6rem
-      @include res(point-3)
+      @include res(pointport)
          padding-top: 0
    &__title
       margin-bottom: 9rem
-      @include res(point-3)
+      @include res(pointport)
          margin-bottom: 3rem
          font-size: 6rem
    &__text
       font-size: 1.5rem
       line-height: 2.4rem
       margin-bottom: 1.6rem
-      @include res(point-3)
+      @include res(pointport)
          font-size: 2rem
    &__icons-group
       display: flex
       gap: 1.7rem
-      @include res(point-3)
+      @include res(pointport)
          margin-bottom: 3rem
 
 .icons-group
    &__link
       width: 3.2rem
-      @include res(point-3)
+      @include res(pointport)
          width: 5rem
       &:hover
          transform: translate(0, -.5rem)

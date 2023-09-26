@@ -1,29 +1,41 @@
 .footer
    display: flex
    margin-bottom: 12.7rem
-   @include res(point-3)
-      display: block
+   @include res(pointmin)
+      margin-bottom: 5rem
+   
+   @include res(pointport)
+      flex-direction: column
+      align-items: center
    &__logo
       margin-bottom: 2.3rem
+      transform: translate(-2rem, 0)
    &__logo-img
       display: block
       width: 22.4rem
+   &__social
+      @include res(pointport)
+      transform: translate(-2rem, 0)
    &__social-link
       &:not(:last-child)
          margin-right: 0.1rem
+
    &__social-img
       display: inline-block
       height: 2.4rem
    &__logo-column
       display: inline-block
       transform: translate(1.9rem, 0)
-      @include res(point-3)
-         display: inline
+      @include res(pointport)
+         margin-right: 0
          text-align: center
+         margin-bottom: 5rem
    &__link-column
       display: inline-block
-      @include res(point-3)
+      @include res(pointport)
+         margin-right: 0
          text-align: center
+         margin-bottom: 5rem
    &__list
       display: flex
       flex-direction: column
@@ -32,8 +44,6 @@
          margin-bottom: 1rem
 .icons-group-footer
    display: inline-block
-   @include res(point-3)
-      display: block
    &__link
       &:not(:last-child)
          margin-right: 1.7rem
