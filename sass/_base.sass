@@ -4,9 +4,22 @@ $c-dark-grey: #191919
 $c-blue: #118DA8
 $c-yellow: #FCFF51
 
+@mixin res ($breakpoint)
+   @if $breakpoint == point-3
+      @media only screen and (max-width: 710px)
+         @content
+   @if $breakpoint == point-2
+      @media only screen and (max-width: 900px)
+         @content
+   @if $breakpoint == point-1
+      @media only screen and (max-width: 1180px)
+         @content
 html
    font-size: 62.5%
-
+   @include res(point-1)
+      font-size: 50%
+   @include res(point-2)
+      font-size: 45%
 *,::after,::before
    margin: 0
    padding: 0
@@ -28,14 +41,17 @@ body
    background-color: $c-dark-grey
 
 .container
-   max-width: 130rem
+   max-width: 133rem
    margin: 0 auto
+   padding: 0 3rem
 
 // БЭМ-блоки
 .navigation
    font-size: 1.7rem
    line-height: 2.7rem
    transition: 0.3s all ease
+   @include res(point-2)
+      font-size: 2.5rem
    &:hover
       color: $c-blue
       transform: translate(0, -0.5rem)
@@ -44,6 +60,9 @@ body
    font-size: 7rem
    line-height: 8.8rem
    letter-spacing: 0.32rem
+   @include res(point-3)
+      font-size: 5rem
+      line-height: 6rem
 
 .title-2
    font-size: 6.4rem
@@ -54,6 +73,8 @@ body
    font-size: 6.4rem
    line-height: 7rem
    letter-spacing: 0.256rem
+   @include res(point-2)
+      font-size: 4rem
 
 .title-4
    display: inline-block

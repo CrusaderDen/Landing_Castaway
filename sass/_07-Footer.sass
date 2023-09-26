@@ -1,6 +1,8 @@
 .footer
    display: flex
    margin-bottom: 12.7rem
+   @include res(point-3)
+      display: block
    &__logo
       margin-bottom: 2.3rem
    &__logo-img
@@ -14,24 +16,26 @@
       height: 2.4rem
    &__logo-column
       display: inline-block
-      transform: translate(1.9rem, 0) 
+      transform: translate(1.9rem, 0)
+      @include res(point-3)
+         display: inline
+         text-align: center
    &__link-column
       display: inline-block
+      @include res(point-3)
+         text-align: center
    &__list
       display: flex
       flex-direction: column
    &__item
       &:not(:last-child)
          margin-bottom: 1rem
-.icons-group-footer         
+.icons-group-footer
    display: inline-block
+   @include res(point-3)
+      display: block
    &__link
       &:not(:last-child)
-         margin-right: 1.7rem         
+         margin-right: 1.7rem
    &__img
       width: 3.2rem
-
-
-
-
-         
