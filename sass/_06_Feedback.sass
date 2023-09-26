@@ -19,18 +19,18 @@
       font-size: 2.4rem
 
 .feedback
-   margin-bottom: 10rem
+   margin:0 2rem 10rem 2rem
    &__cards
       display: grid
       grid-gap: 1.5rem
-      grid-template-columns: repeat(auto-fit, minmax(42rem, auto))
+      grid-template-columns: repeat(auto-fit, minmax(41rem, 1fr))
       justify-content: center
 
 .grid-container
    display: grid
    grid-gap: 2rem
-   grid-template-columns: repeat(auto-fill, 20rem)
-   
-.grid-item
+   grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr))
+   grid-template-rows: auto
+
+.grid-container > *
    background-color: #856464
-   height: 20rem
