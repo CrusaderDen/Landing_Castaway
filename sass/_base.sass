@@ -1,0 +1,128 @@
+$c-black: #000
+$c-white: #fff
+$c-dark-grey: #191919
+$c-blue: #118DA8
+$c-yellow: #FCFF51
+
+html
+   font-size: 62.5%
+
+*,::after,::before
+   margin: 0
+   padding: 0
+   box-sizing: border-box
+
+li
+   list-style-type: none
+
+a
+   text-decoration: none
+   color: inherit
+
+body
+   font-size: 2.2rem
+   line-height: 3.3rem
+   font-weight: 400
+   color: $c-white
+   font-family: 'DM Sans', sans-serif
+   background-color: $c-dark-grey
+
+.container
+   width: 130rem
+   margin: 0 auto
+
+
+// БЭМ-блоки
+.navigation
+   font-size: 1.7rem
+   line-height: 2.7rem
+   transition: 0.3s all ease
+   &:hover
+      color: $c-blue
+      transform: translate(0, -0.5rem)
+
+.title-1
+   font-size: 7rem
+   line-height: 8.8rem
+   letter-spacing: 0.32rem
+
+.title-2
+   font-size: 6.4rem
+   line-height: 7.92rem
+   letter-spacing: 0.29rem
+
+.title-3
+   font-size: 6.4rem
+   line-height: 7rem
+   letter-spacing: 0.256rem
+
+.title-4
+   display: inline-block
+   border-radius: 6px
+   background-color: $c-dark-grey
+   font-size: 1.8rem
+   line-height: 2.7rem
+   padding: 0 1.6rem
+
+.title-5
+   color: $c-blue
+   font-size: 1.7rem
+   line-height: 2.7rem
+   letter-spacing: 0.256rem
+
+.btn
+   background-color: $c-blue
+   font-size: 1.7rem
+   line-height: 2.7rem
+   padding: 1.2rem 2rem 1.2rem 2rem
+   border-radius: 0.6rem
+   display: inline-block
+   transition: all 0.3s ease
+   &:hover
+      font-size: 3rem
+      background-color: #236fad
+
+.paragraph
+   font-size: 2.2rem
+   line-height: 3.3rem
+   opacity: 0.7
+// ----------------
+
+
+//стрелка
+.icon-arrow__place
+   width: 112px
+   height: 112px
+   border-radius: 50%
+   background-color: $c-blue
+   display: flex
+   justify-content: center
+   align-items: center
+   transition: all 0.3s ease
+   &:hover
+      background-color: #236fad
+      transform: translate(0, -0.5rem)
+.icon-arrow__line1
+   width: 6.5rem
+   height: 0.2rem
+   background-color: $c-white
+   position: relative
+.icon-arrow__line2
+   width: 3.5rem
+   height: 0.2rem
+   background-color: $c-white
+   transform: rotate(45deg)
+   transform-origin: right
+   position: absolute
+   top: 0
+   right: 0
+.icon-arrow__line3
+   width: 3.5rem
+   height: 0.2rem
+   background-color: $c-white
+   transform: rotate(-45deg)
+   transform-origin: right
+   position: absolute
+   top: 0
+   right: 0
+// ----------------
