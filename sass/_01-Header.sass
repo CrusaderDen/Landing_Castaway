@@ -4,6 +4,7 @@
    align-items: center
    height: 12rem
    margin-bottom: 4rem
+   position: relative
    @include res(pointport)
       height: 12rem
       margin-bottom: 0rem
@@ -11,7 +12,7 @@
       transform: translate(-1.9rem, 0)
       @include res(pointport)
          transform: translate(0, 0)
-         margin: 0 auto 
+         margin: 0 auto
    &__img
       display: block
       width: 16rem
@@ -21,3 +22,55 @@
    &__list
       display: flex
       gap: 4rem
+
+.burger
+   display: none
+   position: absolute
+   top: 3rem
+   right: 3rem
+   z-index: 3
+   @include res(pointport)
+      display: inline-block
+   @include res(pointmin)
+      transform: scale(0.8)
+   &__toggle
+      display: none
+   &__toggle:checked + &__button &__icon
+      background: transparent
+   &__toggle:checked + &__button &__icon::after
+      transform: rotate(-45deg)
+      top: 0
+   &__toggle:checked + &__button &__icon::before
+      transform: rotate(45deg)
+      top: 0
+   &__button
+      display: block
+      width: 8rem
+      height: 8rem
+      border-radius: 50%
+      background-color: #fff
+      opacity: 0.8
+      position: relative
+      text-align: center
+      box-shadow: .2rem .2rem .5rem #000
+      
+   &__icon
+      display: inline-block
+      height: 0.2rem
+      width: 5rem
+      background-color: $c-dark-grey
+      position: relative
+      margin-top: 3.8rem
+      transition: all 0.3s ease
+      &::after, &::before
+         content: ''
+         height: 0.2rem
+         width: 5rem
+         background-color: $c-dark-grey
+         position: absolute
+         left: 0
+         transition: all 0.3s ease
+      &::after
+         top: 1.5rem
+      &::before
+         top: -1.5rem
